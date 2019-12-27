@@ -1,0 +1,121 @@
+            .caja {
+                width: 200px;
+                height: 200px;
+                font-size: 50px;
+                text-align: center;
+                line-height: 200px;
+                background-color: skyblue;
+                margin: 50px auto;
+            }
+            /* declaramos la animacion y le ponemos un nombre 
+Declaramos los fotogramas clave
+
+PREFERED REDUCED MOTION media query
+media query que puede apagar las animaciones en caso de que el usuario haya elegido eso en su sistema
+operativo
+
+*/
+            
+            @keyframes colores {
+                0% {
+                    background-color: purple;
+                }
+                50% {
+                    background-color: orange;
+                }
+                100% {
+                    background-color: yellow;
+                }
+            }
+            
+            @keyframes aparecer {
+                to {
+                    opacity: 1;
+                    background-color: skyblue;
+                }
+            }
+            
+            @keyframes girar {
+                to {
+                    transform: rotate(1turn);
+                }
+            }
+            
+            @keyframes super {
+                0% {
+                    background-color: skyblue;
+                }
+                30% {
+                    bakckground-color: blue;
+                }
+                70% {
+                    background-color: rgb(66, 0, 128);
+                }
+                100% {
+                    background-color: purple;
+                }
+            }
+            
+            .uno {
+                animation-name: colores;
+                animation-duration: 5s;
+                animation-delay: 2s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                animation-direction: alternate
+            }
+            
+            .dos {
+                opacity: 0;
+                background-color: transparent;
+                animation: aparecer 3s;
+                animation-fill-mode: forwards;
+            }
+            
+            .tres {
+                height: 50px;
+                line-height: 50px;
+                width: 250px;
+                margin: 120px auto;
+                animation: girar 2s;
+                animation-iteration-count: 2;
+                animation-timing-function: steps(10);
+                animation-direction: alternate
+            }
+            
+            .cuatro {
+                animation-name: super;
+                animation-duration: 2s;
+                animation-play-state: paused;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            
+            .cuatro:hover {
+                animation-play-state: running;
+            }
+            
+            .cinco {
+                filter: grayscale(1);
+                transition: filter 0.5s;
+            }
+            
+            .cinco:hover {
+                filter: grayscale(0)
+            }
+            
+            .seis {
+                margin-top: 200px;
+                text-align: center;
+                transition: filter 2s
+            }
+            
+            .seis:hover {
+                filter: hue-rotate(360deg);
+            }
+            
+            @media(preferes-reduced-motion: reduce) {
+                * {
+                    animation: none!important;
+                }
+            }

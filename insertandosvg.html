@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Animations!</title>
+    <meta charset="utf-8">
+    <link href="insertandosvg.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Insertar SVG!</h1>
+
+    <h2>Insertarla como img</h2>
+    <img src="prueba.svg" alt="prueba svg" />
+    <p> al insertarla como imagen funciona pero no funciona la interaccion que agregamos</p>
+
+    <h2>Insertarla como iframe</h2>
+    <p>Si necesito que sea interactivo la inserto con iframe, importa el archivo y mantiene la funcionalidad</p>
+    <iframe src="prueba.svg"></iframe>
+
+    <h2> SVG inline </h2>
+    <p>Copiar el archivo svg completo</p>
+    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+    
+            rect, circle{
+            transition: fill 2s;
+            }
+            rect:hover{
+            fill: forestgreen;
+            }
+            circle:hover{
+            fill: pink;
+            }
+        </style>
+        <rect x="20" y="50" width="120" height="40" fill="#900"/>
+        <circle cx="200" cy="100" r="80" fill="#090"/>
+    </svg>
+</body>
+
+</html>

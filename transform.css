@@ -1,0 +1,48 @@
+.caja {
+    width: 200px;
+    height: 200px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 200px;
+    background-color: skyblue;
+    margin: 5px auto;
+    transition: all 0.5s;
+}
+
+
+/* transform es una propiedad performante que no es pesada para le navegador */
+
+.uno:hover {
+    /* Scale x escala horizontal */
+    /* Scale -1 hace girar el elemento */
+    transform: scaleX(-1);
+}
+
+.dos:hover {
+    /* rota el elemento en grados(deg)
+    va hacia las agujas del reloj, si esta en negativo va para elo tro lado 
+    si teemos la transicion vemos el movimiento pero si no lo tenemos solo cambia
+    Podemos agregar turn y son valores de vueltas, el navegador hace el calculo
+    Rotar el elemento tambien rota el eje
+    */
+    transform: rotate(15deg);
+    /* transform: rotate(5turn) */
+}
+
+.tres:hover {
+    /* Inclina el elemento en cantidad de grados 
+    predeterminado trabaja sobre el eje X pero podemos usar SkewY y 
+    trabajar sobre el Y
+    Skew modifica el eje sobre el que esta el elemtno*/
+    transform: skew(15deg);
+}
+
+.cuatro:hover {
+    /* primer valor mueve x y segundo valor mueve Y */
+    transform: translate(50px, -100px)
+}
+
+.cinco:hover {
+    border: solid black 2px;
+    transform: scale(1.5) skew(15deg) rotate(45deg)
+}
